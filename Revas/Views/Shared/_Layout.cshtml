@@ -30,7 +30,7 @@
                             @if (SignInManager.IsSignedIn(User))
                             {
                                 <a class="btn btn-primary" asp-area="AdminRevas" asp-controller="DashBoard" asp-action="Index">AdminPanel</a>
-                                <a class="btn btn-danger" asp-area="AdminRevas" asp-controller="DashBoard" asp-action="Logout">Logout</a>
+                                <a class="btn btn-danger"   asp-controller="account" asp-action="Logout">Logout</a>
 
 
                             }
@@ -39,7 +39,7 @@
                                 @*hech kim register etmesin deye commite alinib*@
 
                                 @*<a class="btn btn-primary"   asp-controller="account" asp-action="Register">Admin Register</a>*@
-                                <a class="btn btn-danger" asp-controller="account" asp-action="login">Admin login</a>
+                                <a class="btn btn-primary" asp-controller="account" asp-action="login">Admin login</a>
                             }
 
                         </ul>
