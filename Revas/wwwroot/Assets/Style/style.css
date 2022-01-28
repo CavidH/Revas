@@ -1,0 +1,185 @@
+.Menuul {
+    list-style: none;
+}
+
+.Menuul li a {
+    color: black;
+    font-size: 28px;
+    margin-right: 18px;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.navhr {
+    border: 0.1px solid #66B8F0
+}
+
+.hero {
+    background-color: #7eb9f8 !important;
+    height: 625px;
+}
+
+
+/* #ero {
+    background-color: #7EB9F8;
+    width: 700px;
+} */
+
+.herotitle {
+    font-size: 40px;
+    font-weight: 400;
+    /* padding-top: 150px; */
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.Bomb i {
+    margin-top: 50px;
+    font-size: 160px;
+    text-align: center;
+    color: #4b8ed6;
+}
+
+.Bomb i:hover {
+    color: black;
+}
+
+.titlehead {
+    font-size: 24px;
+    font-weight: 400;
+    /* padding-top: 150px; */
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.herocontent {
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-weight: 200;
+    font-size: 17px;
+}
+
+.title {
+    width: 850px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.portfoliotitle {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+#Portfolio {
+    margin-top: 60px;
+}
+
+.close {
+    color: #4aaaeb;
+}
+
+.abouttitle {
+    text-align: center;
+}
+
+.name {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.info {
+    text-align: center;
+    color: #fff;
+}
+
+.aboutimg {
+    border-radius: 5px;
+    margin-left: 25%;
+}
+
+.socilals a {
+    margin: 8px;
+    padding: 10px;
+    color: #fff;
+    font-size: 25px;
+}
+
+#About {
+    background-color: #66B8F0;
+}
+
+.abouttitle {
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.card-header {
+    background-color: #428bca;
+    border: 1px solid #428bca;
+}
+
+
+/* 
+.card {
+    background-color: #227fbd;
+} */
+
+.card-link {
+    color: #fff;
+}
+
+.card-link:hover {
+    color: #fff;
+}
+
+.contacttitle {
+    padding-top: 50px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.btn-request {
+    display: inline;
+    margin-top: 20px;
+    background-color: #428BCB;
+    border-color: #357ebd;
+    /* margin-left: 40%; */
+}
+
+.btn-request:hover {
+    background-color: #428BCB;
+    border-color: #357ebd;
+}
+
+.footertitle {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.footertitle span {
+    color: #2a6496
+}
+
+#Footer {
+    background-color: #7eb9f8;
+}
+
+form {
+    display: flex!important;
+    flex-direction: column;
+    align-content: center;
+}
