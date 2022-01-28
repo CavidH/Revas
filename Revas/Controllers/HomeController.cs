@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Data.DAL;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Revas.Models;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+using Revas.ViewModels;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,27 +10,19 @@ namespace Revas.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private AppDbContext _context { get; }
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var portfolios = await _context.portfolios.Where(p => p.IsDeleted == false).ToListAsync();
+            HomeVM homeVM = new HomeVM { portfolios = portfolios };
+            return View(homeVM);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

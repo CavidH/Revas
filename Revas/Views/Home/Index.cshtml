@@ -1,8 +1,186 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model HomeVM
+<main>
+    <section id="Hero">
+        <div class="hero d-flex justify-content-center">
+            <div class="title mt-5">
+                <h2 class="herotitle">READY TO LAUNCH</h2>
+                <div class="icon  "> <a class="Bomb" href="#"><i class="fas fa-bomb"></i></i></a></div>
+                <p class="titlehead">
+                    LOREM IPSUM DOLOR SIT AMET
+                </p>
+                <p class="herocontent">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa . Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretium quis, sem. Nulla consequat massa quis enim.
+                </p>
+            </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        </div>
+    </section>
+    <section id="Portfolio">
+        <h2 class="portfoliotitle">OUR PORTFOLIO</h2>
+        <div class="container mt-5">
+            <div class="row">
+                @foreach (var portfolio in Model.portfolios)
+                {
+                    <div class="col-lg-4 mb-5  "><img class="img-fluid" src="Assets/Img/@portfolio.Image" width="350px" alt="" data-toggle="modal" data-target=".@portfolio.Image"></div>
+
+                }
+
+
+            </div>
+            @foreach (var modal in Model.portfolios)
+            {
+                <div class="modal fade bd-example-modal-lg1" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    YOUR PROJECT TITLE
+                                </h5>
+                                <a class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-cut"></i>CLOSE</a>
+                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="Assets/Img/1.jpg" width="100%" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+       
+    </section>
+    <section id="About">
+        <h3 class="abouttitle  pt-5">
+            ABOUT COMPANY
+        </h3>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4  ">
+                    <img class="aboutimg" src="Assets/Img/team1.png" width="160px" alt="">
+                    <p class="name">
+                        Jhon Deo Alex
+                    </p>
+                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="socilals d-flex justify-content-center">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"> <i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></i></a>
+                    </div>
+
+                </div>
+                <div class="col-lg-4  ">
+                    <img class="aboutimg" src="Assets/Img/team2.jpg" width="160px" alt="">
+                    <p class="name">
+                        Jhon Deo Alex
+                    </p>
+                    <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="socilals d-flex justify-content-center">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"> <i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></i></a>
+                    </div>
+
+                </div>
+                <div class="col-lg-4  ">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                    Vivamus sagittis egestas mauris
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis egestas mauris ut vehicula. Cras viverra ac orci ac aliquam. Nulla eget condimentum mauris, eget tincidunt est.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                    Cras viverra ac orci ac
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                    Sed Diam Nonummy Euismod
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                    Vivamus sagittis egestas mauris                                </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="card">
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                        Vivamus sagittis egestas mauris                                </div>
+                                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                        Sed Diam Nonummy Euismod
+                                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+    </section>
+    <section id="Contact">
+        <h3 class="contacttitle">CONTACT HERE </h3>
+        <div class="container mt-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Notes">
+                        </div>
+
+
+
+                        <button type="submit" class="btn btn-request btn-primary">SUBMIT REQUEST</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
