@@ -2,6 +2,7 @@
 
 using Core.Entities;
 using Data.DAL;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,7 @@ using System.Threading.Tasks;
 namespace Revas.Areas.AdminRevas.Controllers
 {
     [Area("AdminRevas")]
+    [Authorize]
     public class PortFolioController : Controller
     {
         private AppDbContext _context { get; }

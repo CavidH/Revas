@@ -31,7 +31,7 @@ namespace Revas
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
-            services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 
         }
 
