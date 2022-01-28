@@ -8,7 +8,7 @@
         
         <div class="card mb-4">
             <div class="card-header">
-               <a class="btn btn-primary" >Add</a>
+               <a class="btn btn-primary" asp-controller="PortFolio" asp-action="Create" >Add</a>
             </div>
             <div class="card-body">
                 <table id="datatablesSimple">
@@ -30,8 +30,8 @@
                             <td>@portfolio.Title</td>
                             <td><img src="~/Assets/Img/@portfolio.Image" width="150px" /></td>
                             <td>
-                                <a class="btn btn-primary">Update</a>
-                                <a class="btn btn-danger">Delete</a>
+                                <a class="btn btn-primary" asp-controller="PortFolio" asp-action="Update" asp-route-id="@portfolio.Id">Update</a>
+                                <a class="btn btn-danger" asp-controller="PortFolio" asp-action="Delete" asp-route-id="@portfolio.Id">Delete</a>
                             </td>
 
                         </tr>
