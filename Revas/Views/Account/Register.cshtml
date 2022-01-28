@@ -26,7 +26,7 @@
                                 <div class="card-body">
                                     <form method="post">
                                         <div class="row mb-3">
-                                            |<div class="alert-danger" asp-validation-summary="All"></div>
+                                            @*|<div class="alert-danger" asp-validation-summary="All"></div>*@
                                             <div class="form-floating mb-3">
                                                 <span class="alert-danger" asp-validation-for="UserName"></span>
                                                 <input class="form-control" asp-for="UserName" />
@@ -60,7 +60,7 @@
 </form>
                                 </div>
                                 <div class="card-footer text-center py-3">
-                                    <div class="small"><a href="login.html">Have an account? Go to login</a></div>
+                                    <div class="small"><a asp-controller="Account" asp-action="Login">Have an account? Go to login</a></div>
                                 </div>
                             </div>
                         </div>

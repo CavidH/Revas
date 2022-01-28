@@ -1,7 +1,6 @@
 ﻿using Data.DAL;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using Revas.ViewModels;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +18,7 @@ namespace Revas.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var portfolios = await _context.portfolios.Where(p => p.IsDeleted == false).ToListAsync();
+            var portfolios = await _context.portfolios.Where(p => p.IsDeleted == false).Take(6).ToListAsync();
             HomeVM homeVM = new HomeVM { portfolios = portfolios };
             return View(homeVM);
         }

@@ -69,7 +69,7 @@ namespace Revas.Controllers
                 var user = await _userManager.FindByEmailAsync(userLogin.Email);
                 if (user==null)
                 {
-                    ModelState.AddModelError("", "Email not  found");
+                    ModelState.AddModelError("message", "Email not  found");
                     return View(userLogin);
                 }
                 if (await _userManager.CheckPasswordAsync(user, userLogin.Password) == false)
@@ -97,5 +97,10 @@ namespace Revas.Controllers
             return View(userLogin);
         }
 
+        public async Task<IActionResult> Logout()
+        {
+            await _signManager.SignOutAsync();
+            return RedirectToAction("login", "account");
+        }
     }
 }
