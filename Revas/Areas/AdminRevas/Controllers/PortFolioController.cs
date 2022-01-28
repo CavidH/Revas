@@ -68,6 +68,17 @@ namespace Revas.Areas.AdminRevas.Controllers
             if (createVM == null) return NotFound();
             if (ModelState.IsValid)
             {
+                if (createVM.ImageFile.Length / 1024>300)
+                {
+                    ModelState.AddModelError("", "  file larger than 300 kb,");
+                    return View(createVM);
+                }
+                if (createVM.ImageFile.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("", "file is larger than 300 kb,");
+                    return View(createVM);
+
+                }
                 var FileName = CreateFile(createVM.ImageFile);
                 var portfolio = new Portfolio
                 {

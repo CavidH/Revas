@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http; 
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema; 
 
 namespace Revas.Areas.AdminRevas.ViewModels
@@ -7,6 +8,7 @@ namespace Revas.Areas.AdminRevas.ViewModels
     {
         public string Title { get; set; }
         [NotMapped]
+        [DataType(DataType.Upload)]
         public IFormFile ImageFile { get; set; }
     }
 }

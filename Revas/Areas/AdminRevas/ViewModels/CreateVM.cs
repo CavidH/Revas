@@ -10,6 +10,7 @@ namespace Revas.Areas.AdminRevas.ViewModels
         public string Title { get; set; }
         [NotMapped]
         [Required(ErrorMessage = "File is required")]
+        [DataType(DataType.Upload)]
         public IFormFile ImageFile { get; set; }
     }
 }

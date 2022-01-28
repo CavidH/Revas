@@ -7,6 +7,10 @@
   <ItemGroup>
     <Compile Remove="Migrations\20220128115556_User.cs" />
     <Compile Remove="Migrations\20220128115556_User.Designer.cs" />
+    <Compile Remove="Migrations\20220128133557_SettingDb.cs" />
+    <Compile Remove="Migrations\20220128133557_SettingDb.Designer.cs" />
+    <Compile Remove="Migrations\20220128134540_setting.cs" />
+    <Compile Remove="Migrations\20220128134540_setting.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

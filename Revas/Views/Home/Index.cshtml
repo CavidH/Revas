@@ -20,7 +20,7 @@
         <h2 class="portfoliotitle">OUR PORTFOLIO</h2>
         <div class="container mt-5">
             <div class="row">
-                @foreach (var portfolio in Model.portfolios)
+                @foreach (var portfolio in Model.Portfolios)
                 {
                     <div class="col-lg-4 mb-5  "><img class="img-fluid" src="Assets/Img/@portfolio.Image" width="350px" alt="" data-toggle="modal" data-target="#exampleModal-@portfolio.Id"></div>
 
@@ -28,7 +28,7 @@
 
 
             </div>
-            @foreach (var modal in Model.portfolios)
+            @foreach (var modal in Model.Portfolios)
             {
                 <div class="modal fade bd-example-modal-lg1 " id="exampleModal-@modal.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
