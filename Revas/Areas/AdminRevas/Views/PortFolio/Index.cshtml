@@ -1,0 +1,46 @@
+﻿@model List<Portfolio>
+@{
+    int count = 1;
+}
+<main>
+    <div class="container-fluid px-4">
+        
+        
+        <div class="card mb-4">
+            <div class="card-header">
+               <a class="btn btn-primary" >Add</a>
+            </div>
+            <div class="card-body">
+                <table id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>count</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Setting</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var portfolio in Model)
+                        {
+                        <tr>
+                            <td>@count</td>
+                            <td>@portfolio.Title</td>
+                            <td><img src="~/Assets/Img/@portfolio.Image" width="150px" /></td>
+                            <td>
+                                <a class="btn btn-primary">Update</a>
+                                <a class="btn btn-danger">Delete</a>
+                            </td>
+
+                        </tr>
+                            count++;
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
